@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiệp Mời Tốt Nghiệp - Nguyễn Văn Duy | ĐH Bách Khoa Hà Nội</title>
+    
+    <!-- Open Graph / Meta Social Share -->
+    <meta property="og:title" content="Thiệp Mời Tốt Nghiệp - Nguyễn Văn Duy">
+    <meta property="og:description" content="Trân trọng kính mời bạn đến dự Lễ Trao Bằng Tốt Nghiệp Ngành Kỹ thuật Hàng không K67 - ĐH Bách Khoa Hà Nội">
+    <meta property="og:image" content="assets/avatar.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts: Montserrat & Be Vietnam Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Canvas background for technical circuit lines & golden sparkles -->
+    <canvas id="particle-canvas"></canvas>
+
+    <div class="main-viewport">
+        <!-- 2-PANEL MINIMALIST BI-FOLD CARD: TRẮNG - ĐỎ BÁCH KHOA - VÀNG KIM KHOA HỌC -->
+        <main class="bifold-card-container">
+            
+            <!-- PANEL 1: COVER PAGE (BÌA THIỆP - ĐỎ ĐÔ BÁCH KHOA & VÀNG KIM) -->
+            <section class="card-panel cover-panel">
+                <div class="panel-border-frame">
+                    <span class="dot-corner dot-tl"></span>
+                    <span class="dot-corner dot-tr"></span>
+                    <span class="dot-corner dot-bl"></span>
+                    <span class="dot-corner dot-br"></span>
+
+                    <h1 class="cover-main-title">THƯ MỜI</h1>
+
+                    <!-- Official HUST Logo Image on Cover -->
+                    <div class="cover-emblem">
+                        <img src="assets/logohust.png" alt="Logo Đại Học Bách Khoa Hà Nội" class="cover-hust-logo">
+                        <div class="emblem-text">
+                            <span class="emblem-sub">ĐẠI HỌC BÁCH KHOA HÀ NỘI</span>
+                            <h2 class="emblem-title">LỄ TRAO BẰNG TỐT NGHIỆP</h2>
+                            <span class="emblem-year">K67 — 2026</span>
+                        </div>
+                    </div>
+
+                    <!-- Student Name Badge on Cover -->
+                    <div class="cover-student-info">
+                        <p class="cover-role">TÂN CỬ NHÂN</p>
+                        <h3 class="cover-name">NGUYỄN VĂN DUY</h3>
+                        <p class="cover-major"><i class="fa-solid fa-plane-departure"></i> KỸ THUẬT HÀNG KHÔNG</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PANEL 2: INNER CONTENT PAGE (NỘI DUNG THIỆP - TRẮNG NGỌC & ĐỎ BÁCH KHOA) -->
+            <section class="card-panel content-panel">
+                <div class="panel-border-frame inner-frame">
+                    <span class="dot-corner dot-tl"></span>
+                    <span class="dot-corner dot-tr"></span>
+                    <span class="dot-corner dot-bl"></span>
+                    <span class="dot-corner dot-br"></span>
+
+                    <!-- Top Official HUST Logo Image Header -->
+                    <div class="inner-header">
+                        <img src="assets/logohust.png" alt="Logo Đại Học Bách Khoa Hà Nội" class="hust-official-logo">
+                        <div class="header-text">
+                            <h2 class="hust-title-vi">ĐẠI HỌC BÁCH KHOA HÀ NỘI</h2>
+                            <span class="hust-title-en">HANOI UNIVERSITY OF SCIENCE AND TECHNOLOGY</span>
+                        </div>
+                    </div>
+
+                    <h2 class="inner-title">THƯ MỜI</h2>
+
+                    <!-- Student Details -->
+                    <div class="inner-student-block">
+                        <span class="sub-role">Tân Cử Nhân</span>
+                        <h3 class="inner-student-name">NGUYỄN VĂN DUY</h3>
+                        <p class="inner-student-major">Ngành Kỹ thuật Hàng không K67</p>
+                        <p class="inner-student-phone"><i class="fa-solid fa-phone red-accent"></i> SĐT / Zalo: <strong>0339931323</strong></p>
+                    </div>
+
+                    <!-- Photo Thumbnail -->
+                    <div class="inner-photo-box">
+                        <img src="assets/avatar.jpg" alt="Nguyễn Văn Duy" class="inner-photo">
+                    </div>
+
+                    <!-- Guest Greeting (?to=...) -->
+                    <div class="guest-invitation-box">
+                        <span class="guest-lead"><i class="fa-solid fa-envelope"></i> TRÂN TRỌNG KÍNH MỜI</span>
+                        <h3 id="guest-name-display" class="guest-name-text">Bạn/Em</h3>
+                        <p class="guest-desc">Đến dự buổi <strong>Lễ tốt nghiệp & Chia vui</strong> cùng Duy!</p>
+                    </div>
+
+                    <!-- Time & Location Details -->
+                    <div class="event-info-list">
+                        <div class="info-line">
+                            <i class="fa-regular fa-clock line-icon"></i>
+                            <span>Thời gian: <strong>08:30 — Ngày 15/09/2026</strong> (Thứ Ba)</span>
+                        </div>
+                        <div class="info-line">
+                            <i class="fa-solid fa-location-dot line-icon"></i>
+                            <span>Địa điểm: <strong>Tòa C2 — Đại học Bách khoa Hà Nội</strong></span>
+                        </div>
+                    </div>
+
+                    <!-- Live Countdown Timer -->
+                    <div class="countdown-minimal">
+                        <span class="cd-title"><i class="fa-solid fa-hourglass-half"></i> Đếm ngược đến giờ cử hành</span>
+                        <div class="countdown-grid" id="countdown-timer">
+                            <div class="time-box">
+                                <span id="days">00</span>
+                                <label>Ngày</label>
+                            </div>
+                            <div class="time-box">
+                                <span id="hours">00</span>
+                                <label>Giờ</label>
+                            </div>
+                            <div class="time-box">
+                                <span id="minutes">00</span>
+                                <label>Phút</label>
+                            </div>
+                            <div class="time-box">
+                                <span id="seconds">00</span>
+                                <label>Giây</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="minimal-buttons">
+                        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=L%E1%BB%85+Trao+B%E1%BA%B1ng+T%E1%BB%91t+Nghi%E1%BB%87p+-+Nguy%E1%BB%85n+V%C4%83n+Duy&dates=20260915T013000Z/20260915T050000Z&details=D%E1%BB%B1+L%E1%BB%85+t%E1%BB%91t+nghi%E1%BB%87p+K%E1%BB%B9+thu%E1%BA%ADt+H%C3%A0ng+kh%C3%B4ng+K67+Nguy%E1%BB%85n+V%C4%83n+Duy&location=T%C3%B2a+C2+-+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+B%C3%A1ch+khoa+H%C3%A0+N%E1%BB%99i" target="_blank" class="btn btn-hust-red">
+                            <i class="fa-regular fa-calendar-plus"></i> Thêm Vào Lịch
+                        </a>
+                        <a href="https://maps.google.com/?q=T%C3%B2a+C2+Đại+học+Bách+khoa+Hà+Nội" target="_blank" class="btn btn-hust-gold">
+                            <i class="fa-solid fa-map-location-dot"></i> Bản Đồ Chỉ Đường
+                        </a>
+                    </div>
+
+                    <!-- Gratitude Footer -->
+                    <div class="minimal-footer">
+                        <p class="quote-text">“Cảm niệm đức cù lao của cha mẹ, tri ân tâm khai sáng của thầy cô, cảm kích sự tương trợ của bằng hữu và khắc ghi tinh thần bền bỉ của bản thân.”</p>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

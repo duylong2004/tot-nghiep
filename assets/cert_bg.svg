@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1100" width="800" height="1100">
+  <defs>
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEF08A"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#A16207"/>
+    </linearGradient>
+    <linearGradient id="red-ribbon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8E001A"/>
+      <stop offset="100%" stop-color="#650012"/>
+    </linearGradient>
+    <filter id="blur-soft">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+  </defs>
+
+  <!-- Ivory Paper Background -->
+  <rect width="800" height="1100" fill="#FFFDF5"/>
+
+  <!-- Double Gold Outer Frame -->
+  <rect x="24" y="24" width="752" height="1052" rx="16" fill="none" stroke="url(#gold-grad)" stroke-width="4"/>
+  <rect x="32" y="32" width="736" height="1036" rx="12" fill="none" stroke="url(#gold-grad)" stroke-width="1.5" stroke-dasharray="8 4"/>
+
+  <!-- Top-Left Red & Gold Ribbon -->
+  <path d="M 24,24 L 280,24 L 24,280 Z" fill="url(#red-ribbon)"/>
+  <line x1="24" y1="280" x2="280" y2="24" stroke="url(#gold-grad)" stroke-width="3"/>
+
+  <!-- Bottom-Right Red & Gold Ribbon -->
+  <path d="M 776,1076 L 520,1076 L 776,820 Z" fill="url(#red-ribbon)"/>
+  <line x1="776" y1="820" x2="520" y2="1076" stroke="url(#gold-grad)" stroke-width="3"/>
+
+  <!-- FADED TECHNICAL WATERMARK (HUST 70th, Gears, Circuit Traces) -->
+  <g opacity="0.13" filter="url(#blur-soft)">
+    <!-- Large Gear Ring Center Right -->
+    <circle cx="580" cy="550" r="220" fill="none" stroke="#D4AF37" stroke-width="6" stroke-dasharray="12 12"/>
+    <circle cx="580" cy="550" r="160" fill="none" stroke="#8E001A" stroke-width="3"/>
+    
+    <!-- Circuit Lines -->
+    <path d="M 100,200 L 300,200 L 400,300 L 700,300" stroke="#8E001A" stroke-width="2" fill="none"/>
+    <circle cx="300" cy="200" r="6" fill="#8E001A"/>
+    <circle cx="400" cy="300" r="6" fill="#8E001A"/>
+
+    <path d="M 700,850 L 500,850 L 400,750 L 100,750" stroke="#D4AF37" stroke-width="2" fill="none"/>
+    <circle cx="500" cy="850" r="6" fill="#D4AF37"/>
+    <circle cx="400" cy="750" r="6" fill="#D4AF37"/>
+
+    <!-- Large 70th HUST Watermark -->
+    <text x="380" y="600" font-family="'Montserrat', sans-serif" font-weight="900" font-size="280" fill="#8E001A" text-anchor="middle">70</text>
+    <text x="380" y="680" font-family="'Montserrat', sans-serif" font-weight="800" font-size="40" fill="#D4AF37" text-anchor="middle">HUST 1956 - 2026</text>
+
+    <!-- Faded Certificate Text Background -->
+    <text x="400" y="320" font-family="'Alex Brush', cursive" font-size="52" fill="#8E001A" text-anchor="middle">Giấy chứng nhận / Certificate</text>
+    <text x="400" y="380" font-family="'Montserrat', sans-serif" font-weight="800" font-size="22" fill="#0F172A" text-anchor="middle">GIÁM ĐỐC ĐẠI HỌC BÁCH KHOA HÀ NỘI</text>
+    <text x="400" y="420" font-family="'Montserrat', sans-serif" font-weight="700" font-size="18" fill="#8E001A" text-anchor="middle">HỘI NGHỊ SINH VIÊN NGHIÊN CỨU KHOA HỌC LẦN THỨ 43</text>
+    <text x="400" y="460" font-family="'Montserrat', sans-serif" font-size="16" fill="#0F172A" text-anchor="middle">Trường Cơ Khí — Ngành Kỹ Thuật Hàng Không K67</text>
+  </g>
+</svg>
