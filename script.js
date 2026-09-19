@@ -26,7 +26,7 @@ function initGuestName() {
 
 /* 2. ĐẾM NGƯỢC THỜI GIAN */
 function initCountdownTimer() {
-    const targetDate = new Date('2026-09-15T08:30:00+07:00').getTime();
+    const targetDate = new Date('2026-09-26T09:30:00+07:00').getTime();
 
     const daysEl = document.getElementById('days');
     const hoursEl = document.getElementById('hours');
